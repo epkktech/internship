@@ -1,24 +1,26 @@
-name: Deploy to GitHub Pages
+name: Validate pull requests
 
 on:
   push:
-    branches: [main, master]
-  workflow_dispatch:
+    branches:
+      - 'update-*'
+  pull_request:
+    branches:
+      - main
+      - master
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: validate-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
-  build:
+  validate:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Node.js
@@ -30,32 +32,10 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
-      - name: Build project for GitHub Pages
+      - name: Type-check
+        run: npm run lint
+
+      - name: Build project
         run: npm run build
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
-
-      - name: Verify build output
-        run: test -s ./dist/index.html
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
