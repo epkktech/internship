@@ -124,9 +124,9 @@ const MemoDocumentContent: React.FC<MemoDocumentContentProps> = ({
           }}
         >
           <div className="font-bold text-center">ฝ่ายวิชาการ วิทยาลัยเทคนิคขอนแก่น</div>
-          <div>เลขรับภายใน...........................................</div>
-          <div>วันที่.................................................</div>
-          <div>เวลา..................................................</div>
+          <div>เลขรับภายใน..........................................</div>
+          <div>วันที่........................................................</div>
+          <div>เวลา.....................................................</div>
         </div>
 
         {/* Garuda Emblem + บันทึกข้อความ (ขนาด 14.4mm) */}
@@ -149,7 +149,7 @@ const MemoDocumentContent: React.FC<MemoDocumentContentProps> = ({
         style={{
           fontFamily: "'TH SarabunPSK', 'TH Sarabun New', 'Sarabun', sans-serif",
           fontSize: '15pt',
-          lineHeight: 1.38
+          lineHeight: 1.2
         }}
       >
         {/* Header fields */}
@@ -262,11 +262,11 @@ const MemoDocumentContent: React.FC<MemoDocumentContentProps> = ({
           <div className="flex items-center gap-6 pt-0.5">
             <span>( &nbsp; ) ทราบ</span>
             <span>( &nbsp; ) ปรับปรุง/ข้อเสนอแนะ</span>
-            <span>( &nbsp; ) อื่น ๆ ........................................</span>
+            <span>( &nbsp; ) อื่น ๆ ................................</span>
           </div>
 
           <div className="pt-2 text-center ml-auto w-[90mm] space-y-0.5">
-            <div>ว่าที่ร้อยตรี</div>
+            <div>ว่าที่ร้อยตรี...................................................</div>
             <div>(ไชยา ทับวิธร)</div>
             <div>รองผู้อำนวยการฝ่ายวิชาการ ปฏิบัติหน้าที่แทน</div>
             <div>ผู้อำนวยการวิทยาลัยเทคนิคขอนแก่น</div>
@@ -1802,7 +1802,7 @@ export const WorkplaceTeachingReportView: React.FC<WorkplaceTeachingReportViewPr
               boxSizing: 'border-box',
               fontFamily: "'TH SarabunPSK', 'TH Sarabun New', 'Sarabun', sans-serif",
               fontSize: '15pt',
-              lineHeight: 1.35,
+              lineHeight: 1.2,
               color: '#000000'
             }}
           >
@@ -1920,7 +1920,7 @@ export const WorkplaceTeachingReportView: React.FC<WorkplaceTeachingReportViewPr
               boxSizing: 'border-box',
               fontFamily: "'TH SarabunPSK', 'TH Sarabun New', 'Sarabun', sans-serif",
               fontSize: '15pt',
-              lineHeight: 1.35,
+              lineHeight: 1.2,
               color: '#000000'
             }}
           >
@@ -2249,7 +2249,7 @@ export const WorkplaceTeachingReportView: React.FC<WorkplaceTeachingReportViewPr
                   boxSizing: 'border-box',
                   fontFamily: "'TH SarabunPSK', 'TH Sarabun New', 'Sarabun', sans-serif",
                   fontSize: '15pt',
-                  lineHeight: 1.35,
+                  lineHeight: 1.2,
                   color: '#000000',
                   backgroundColor: '#ffffff'
                 }}
@@ -2426,7 +2426,7 @@ export const WorkplaceTeachingReportView: React.FC<WorkplaceTeachingReportViewPr
                   boxSizing: 'border-box',
                   fontFamily: "'TH SarabunPSK', 'TH Sarabun New', 'Sarabun', sans-serif",
                   fontSize: '15pt',
-                  lineHeight: 1.35,
+                  lineHeight: 1.2,
                   color: '#000000',
                   backgroundColor: '#ffffff'
                 }}
@@ -2606,7 +2606,7 @@ export const WorkplaceTeachingReportView: React.FC<WorkplaceTeachingReportViewPr
                     boxSizing: 'border-box',
                     fontFamily: "'TH SarabunPSK', 'TH Sarabun New', 'Sarabun', sans-serif",
                     fontSize: '15pt',
-                    lineHeight: 1.35,
+                    lineHeight: 1.2,
                     color: '#000000',
                     backgroundColor: '#ffffff'
                   }}
@@ -2640,7 +2640,7 @@ export const WorkplaceTeachingReportView: React.FC<WorkplaceTeachingReportViewPr
                     boxSizing: 'border-box',
                     fontFamily: "'TH SarabunPSK', 'TH Sarabun New', 'Sarabun', sans-serif",
                     fontSize: '15pt',
-                    lineHeight: 1.35,
+                    lineHeight: 1.2,
                     color: '#000000',
                     backgroundColor: '#ffffff'
                   }}
