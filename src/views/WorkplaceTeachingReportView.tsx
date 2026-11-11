@@ -110,7 +110,7 @@ const MemoDocumentContent: React.FC<MemoDocumentContentProps> = ({
 }) => {
   return (
     <>
-      {/* Top row: Garuda & Title Center, Receipt Stamp Box Right */}
+     {/* Top row: Garuda & Title Center, Receipt Stamp Box Right */}
       <div className="relative mb-2">
         {/* Receipt stamp box on top right - shifted right 1cm (-10mm) */}
         <div 
@@ -120,7 +120,7 @@ const MemoDocumentContent: React.FC<MemoDocumentContentProps> = ({
             width: '62mm', 
             fontFamily: "'TH SarabunPSK', 'TH Sarabun New', 'Sarabun', sans-serif",
             fontSize: '13pt', 
-            lineHeight: 1.3 
+            lineHeight: 1.1 
           }}
         >
           <div className="font-bold text-center">ฝ่ายวิชาการ วิทยาลัยเทคนิคขอนแก่น</div>
@@ -132,7 +132,7 @@ const MemoDocumentContent: React.FC<MemoDocumentContentProps> = ({
         {/* Garuda Emblem + บันทึกข้อความ (ขนาด 14.4mm) */}
         <div className="flex flex-col items-start pt-0">
           <img 
-            src="/assets/aistudio/pic1_206a0c1e.jpg" 
+            src={`${import.meta.env.BASE_URL}assets/aistudio/pic1_206a0c1e.jpg`}
             alt="ตราครุฑ" 
             className="h-auto object-contain mb-1" 
             style={{ width: '14.4mm' }}
@@ -164,7 +164,7 @@ const MemoDocumentContent: React.FC<MemoDocumentContentProps> = ({
               <span className="font-bold mr-2 whitespace-nowrap">ที่</span>
               <span>แผนกวิชาช่างไฟฟ้ากำลัง</span>
             </div>
-            <div className="flex items-baseline mr-10">
+            <div className="flex items-baseline mr-40">
               <span className="font-bold mr-2 whitespace-nowrap">วันที่</span>
               <span>{thaiReportDateStr}</span>
             </div>
@@ -257,7 +257,7 @@ const MemoDocumentContent: React.FC<MemoDocumentContentProps> = ({
         </div>
 
         {/* Deputy Director Box */}
-        <div className="mt-2.5 space-y-0.5" style={{ fontSize: '14pt' }}>
+        <div className="mt-2.5 space-y-0.5" style={{ fontSize: '15pt' }}>
           <div className="font-bold underline">ความคิดเห็นของรองผู้อำนวยการฝ่ายวิชาการ</div>
           <div className="flex items-center gap-6 pt-0.5">
             <span>( &nbsp; ) ทราบ</span>
@@ -266,7 +266,7 @@ const MemoDocumentContent: React.FC<MemoDocumentContentProps> = ({
           </div>
 
           <div className="pt-2 text-center ml-auto w-[90mm] space-y-0.5">
-            <div>ว่าที่ร้อยตรี</div>
+            <div>ว่าที่ร้อยตรี......................................</div>
             <div>(ไชยา ทับวิธร)</div>
             <div>รองผู้อำนวยการฝ่ายวิชาการ ปฏิบัติหน้าที่แทน</div>
             <div>ผู้อำนวยการวิทยาลัยเทคนิคขอนแก่น</div>
@@ -309,7 +309,7 @@ const WeeklyReportPage1Content: React.FC<WeeklyReportPage1ContentProps> = ({
       <div className="border border-black p-3 mb-4 flex items-center gap-4">
         <div className="w-[28mm] flex-shrink-0 flex items-center justify-center border-r border-black pr-3">
           <img 
-            src="/assets/aistudio/LogoKKTech_f25116a9.jpg" 
+            src={`${import.meta.env.BASE_URL}assets/aistudio/LogoKKTech_f25116a9.jpg`}  
             alt="ตราวิทยาลัยเทคนิคขอนแก่น" 
             className="w-[24mm] h-auto object-contain"
           />
@@ -1753,7 +1753,7 @@ export const WorkplaceTeachingReportView: React.FC<WorkplaceTeachingReportViewPr
               width: '210mm',
               minHeight: '297mm',
               margin: '0 auto',
-              padding: '10mm 20mm 35mm 20mm', // ปรับขยายขอบกระดาษส่วนล่างเพิ่มอีก 2 ซม. (35mm)
+              padding: '5mm 20mm 5mm 20mm', // ปรับขยายขอบกระดาษส่วนล่างเพิ่มอีก 0.5ซม. (5mm)
               boxSizing: 'border-box',
               fontFamily: "'TH SarabunPSK', 'TH Sarabun New', 'Sarabun', sans-serif",
               color: '#000000'
@@ -2073,7 +2073,7 @@ export const WorkplaceTeachingReportView: React.FC<WorkplaceTeachingReportViewPr
                   width: '210mm',
                   minHeight: '297mm',
                   height: '297mm',
-                  padding: '10mm 20mm 35mm 20mm', // ปรับขยายขอบกระดาษส่วนล่างเพิ่มอีก 2 ซม. (35mm)
+                  padding: '5mm 20mm 5mm 20mm', // ปรับขยายขอบกระดาษส่วนล่างเพิ่มอีก 0.5 ซม. (5mm)
                   boxSizing: 'border-box',
                   fontFamily: "'TH SarabunPSK', 'TH Sarabun New', 'Sarabun', sans-serif",
                   color: '#000000',
@@ -2245,7 +2245,7 @@ export const WorkplaceTeachingReportView: React.FC<WorkplaceTeachingReportViewPr
                   width: '210mm',
                   minHeight: '297mm',
                   height: '297mm',
-                  padding: '18mm',
+                  padding: '10mm',
                   boxSizing: 'border-box',
                   fontFamily: "'TH SarabunPSK', 'TH Sarabun New', 'Sarabun', sans-serif",
                   fontSize: '15pt',
@@ -2422,7 +2422,7 @@ export const WorkplaceTeachingReportView: React.FC<WorkplaceTeachingReportViewPr
                   width: '210mm',
                   minHeight: '297mm',
                   height: '297mm',
-                  padding: '18mm',
+                  padding: '10mm',
                   boxSizing: 'border-box',
                   fontFamily: "'TH SarabunPSK', 'TH Sarabun New', 'Sarabun', sans-serif",
                   fontSize: '15pt',
@@ -2602,7 +2602,7 @@ export const WorkplaceTeachingReportView: React.FC<WorkplaceTeachingReportViewPr
                     width: '210mm',
                     minHeight: '297mm',
                     height: '297mm',
-                    padding: '18mm',
+                    padding: '10mm',
                     boxSizing: 'border-box',
                     fontFamily: "'TH SarabunPSK', 'TH Sarabun New', 'Sarabun', sans-serif",
                     fontSize: '15pt',
@@ -2636,7 +2636,7 @@ export const WorkplaceTeachingReportView: React.FC<WorkplaceTeachingReportViewPr
                     width: '210mm',
                     minHeight: '297mm',
                     height: '297mm',
-                    padding: '18mm',
+                    padding: '10mm',
                     boxSizing: 'border-box',
                     fontFamily: "'TH SarabunPSK', 'TH Sarabun New', 'Sarabun', sans-serif",
                     fontSize: '15pt',
